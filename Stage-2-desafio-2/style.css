@@ -1,0 +1,179 @@
+/* Formatação geral */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --color-base-dark: #2F2E41;
+  --color-accent-green: #00BFA6;
+  --color-neutral-light: #C2C2C2;
+}
+
+body {
+  padding: 7rem 5rem 3rem;
+  background-color: var(--color-base-dark);
+}
+
+body img {
+  width: 100%;
+}
+
+/* Formatação Seção Header */
+
+header {
+  width: min(108rem, 90%);
+  margin-inline: auto;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+header nav img {
+  transition: all 0.5s;
+}
+
+header nav img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+header nav ul div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+header nav ul div li {
+  transition: all 0.5s;
+}
+
+header nav ul div li:hover {
+  transform: scale(1.1);
+  font-weight: 700;
+}
+
+header nav a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+  color: white;
+}
+
+
+/* Formatação Seção Main */
+
+.main-content {
+  width: min(111rem, 100%);
+  margin: 5rem auto 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  text-align: center;
+}
+
+.text-content h1 {
+  margin-bottom: 6rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 4rem;
+  color: white;
+}
+
+.text-content h1 strong {
+  color: var(--color-accent-green);
+}
+
+.text-content p {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: var(--color-neutral-light);
+}
+
+
+/* Formatação Seção Footer */
+
+footer {
+  width: min(56.8rem, 100%);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.div-line {
+  margin-bottom: 2.7rem;
+  border: 1px solid var(--color-accent-green);
+}
+
+footer p, footer a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+  color: white;
+}
+
+footer a {
+  font-size: 1.5rem;
+  transition: all 0.5s;
+}
+
+footer a:hover {
+  color: rgb(210, 210, 247);
+  font-weight: 700;
+}
+
+
+/* Formatação Mobile M */
+
+@media(min-width: 375px) {
+  header nav ul div {
+    flex-direction: row;
+  }
+}
+
+
+/* Formatação Tablet */
+
+@media(min-width: 768px) {
+  header nav ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header nav ul div {
+    gap: 6rem;
+  }
+
+  .main-content {
+    flex-direction: row;
+  }
+}
+
+
+/* Formatação Laptop */
+
+@media(min-width: 1024px) {
+  .main-content {
+    margin-block: 10rem 15rem;
+  }
+
+  .main-content img {
+    width: 40rem;
+  }
+}
